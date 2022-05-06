@@ -84,7 +84,7 @@ const findLongestWord = (arrStr) => {
 };
 
 // TIME COMPLEXITY: O(n)
-// Extra Credit -- SPACE COMPLEXITY: O(1)
+// Extra Credit -- SPACE COMPLEXITY: O(n)
 
 // TESTS
 
