@@ -1,0 +1,10 @@
+| ------------- | tinyArray | smallArray | mediumArray | largeArray | extraArray  |
+| ------------- | --------- | ---------- | ----------- | ---------- | ----------- |
+| doubleInsert  | 50.1 μs   | 65.8 μs    | 243.5 μs    | 12.3826 ms | 1.4644364 s |
+| ------------- | --------- | ---------- | ----------- | ---------- | ----------- |
+| doubleAppend  | 123.3 μs  | 154.9 μs   | 184.4 μs    | 705.3 μs   | 4.7626 ms   |
+
+While the difference in performance time is negligible for either function when moving from a 'tinyArray' to the 'smallArray', by the time we pass in the 'mediumArray', the performance time for the insert function (that uses the unshift method) jumps by 177.7 μs, whereas the append function's performance only differs by 29.5 μs from the previous array passed. This pattern only continues when passing in the 'large', and 'extralarge' arrays respectively; it is still possible to measure the performance of the append function in μs, and ms -- whereas the insert function has to moved into ms, and seconds. When viewing the results of the extraLargeArray, the insert function measures at nearly 1.5 seconds, while the insert function can return the same output, and clock in a performance time of 4 thousandths of a second. In terms of scalability, using the append function is clearly the better choice.
+
+Extra credit: The reason for the drastic increase in performance time for the insert function is that in addition to the for loop employed, it also uses the unshift method. When using unshift in add a value into the beginning of the array, it has to move all other values over, and reassign each value a new index -- in combination with the for loop already employed to iterate over the array that is passed in, using the unshift method requires the function to iterate over the newly created array, EACH TIME a new value is added which adds a significant amount of processing necessary especially when compared to the append function that simply tacks any new value to the end of newly created array, which does not require it to iterate over the newly created array or change existing index values.
+# DM_week-7_assessments
