@@ -15,7 +15,7 @@ const addToZero = (numArray) => {
 };
 
 // TIME COMPLEXITY: O(n^2)
-// Extra Credit -- SPACE COMPLEXITY: O(n)
+// Extra Credit -- SPACE COMPLEXITY: O(1)
 
 // TESTS:
 
@@ -63,7 +63,7 @@ const isPangram = (string) => {
   return "pangram";
 };
 
-// TIME COMPLEXITY: O(n^2) --> thought process: though a for loop is employed alongside the 'toLowerCase', and 'replace' methods; the for loop only iterates over the alphabet string, which is a predetermined 26 characters long, and will never change, whereas the two other methods used to iterate over the string passed into the function are dependent on the length of the string itself.
+// TIME COMPLEXITY: O(n)
 // Extra Credit -- SPACE COMPLEXITY: O(n)
 
 // TESTS
@@ -84,7 +84,7 @@ const findLongestWord = (arrStr) => {
 };
 
 // TIME COMPLEXITY: O(n)
-// Extra Credit -- SPACE COMPLEXITY: O(n)
+// Extra Credit -- SPACE COMPLEXITY: O(1)
 
 // TESTS
 
